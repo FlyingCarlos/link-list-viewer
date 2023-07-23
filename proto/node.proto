@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message Node {
+    int64 id = 1;
+    string name = 2;
+    int64 parent_id = 3;
+    int64 exe_id = 4;
+}
+
+message NodeList {
+    repeated Node nodes = 1;
+}
+
+message Executor {
+    int64 id = 1;
+    string name = 2;
+    int64 parent_id = 3;
+}
+
+message ExecutorMap {
+    map<int64, Executor> executors = 1;
+}
